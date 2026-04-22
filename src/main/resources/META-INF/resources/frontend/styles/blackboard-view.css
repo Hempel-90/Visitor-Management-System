@@ -1,0 +1,394 @@
+
+/*region Haupt-Container----------------------------------------------------------------------------------------------*/
+
+/* Hauptcontainer */
+.visitors-today-view {
+    color: #000000;
+    text-align: center;
+    background-image: url("../images/backgroundvisitor.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Logo oben links */
+.visitors-today-view::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 310px;
+    height: 145px;
+    background: url("../images/logo.png") no-repeat;
+    background-size: contain;
+    z-index: 10;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom: #00b4d8 solid 1px;
+    border-left: #00b4d8 solid 1px;
+    border-right: #00b4d8 solid 1px;
+    box-shadow: 0 2px 10px rgba(1, 8, 51, 0.69);
+}
+
+/* Alternative Ansicht */
+.no-visitors {
+    background: url("../images/background.jpg");
+    transition: all 0.4s ease;
+}
+
+/*endregion Haupt-Container-------------------------------------------------------------------------------------------*/
+
+
+/*region Header-------------------------------------------------------------------------------------------------------*/
+
+/* Überschrift-Header rechts neben Logo */
+.visitors-today-header {
+    position: absolute;
+    top: 20px;
+    left: calc(25px + 320px + 20px);
+    right: 20px;
+    height: 60px;
+    background-color: #0a0f1e;
+    color: white;
+    font-size: 2.5em;
+    font-weight: bold;
+    border: #00b4d8 solid 1px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    max-width: calc(100% - 40px - 320px - 20px);
+    white-space: pre-line;
+    box-shadow: 0 2px 10px rgba(1, 8, 51, 0.69);
+}
+
+/* Begrüßungs-Header links neben Scroll-Container */
+.visitors-today-list-header {
+    margin-top: 11px;
+    padding: 10px;
+    color: white;
+    background-color: #0a0f1e;
+    border: #00b4d8 solid 1px;
+    border-radius: 5px;
+    font-size: 2.3em;
+    font-weight: bold;
+    flex: 0 0 auto;
+    max-width: 400px;
+    box-shadow: 0 2px 10px rgba(1, 8, 51, 0.69);
+}
+
+/* Container für Begrüßung + Scrollcontainer */
+.visitors-today-header-container {
+    position: relative;
+    top: 70px;
+    left: calc(1px + 310px + 20px);
+    right: 400px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+    max-width: calc(100% - 40px - 320px - 40px);
+}
+
+/*endregion Header----------------------------------------------------------------------------------------------------*/
+
+
+/*region Scroll-Container---------------------------------------------------------------------------------------------*/
+
+/* Scroll-Container außen */
+.visitors-today-list-container {
+    flex: 1 1 auto;
+    min-width: 820px;
+    max-width: 820px;
+    height: 77vh;
+    overflow: hidden;
+    position: relative;
+    padding: 2px;
+    border-radius: 5px;
+    border-top: none;
+    border-bottom: none;
+    box-sizing: border-box;
+}
+
+/* Nur wenn gescrollt wird */
+.visitors-today-list-container.scrolling {
+    border-top: #00b4d8 solid 2px;
+    border-bottom: #00b4d8 solid 2px;
+}
+
+/* Scroll-Container innen*/
+.visitors-today-list-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container innerhalb Scroll-Container */
+.visitor-entry {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 99.5%;
+    border: #00b4d8 solid 2px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.16);
+    box-shadow: 0 2px 10px rgba(1, 8, 51, 0.69);
+}
+
+/* Firma */
+.visitor-company {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+    font-size: 2.2em;
+    font-weight: bolder;
+    color: #00b4d8;
+    background-color: #0a0f1e;
+    width: 92.7%;
+    border-radius: 1px;
+    box-shadow: 0 2px 10px rgba(1, 8, 51, 0.69);
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* Besucher */
+.visitor-name {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+    font-size: 2em;
+    font-weight: bold;
+    width: 92.5%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 30px;
+    padding-left: 30px;
+    color: #FFFFFF;
+    background-color: #141b2da1;
+}
+
+/*endregion Scroll-Container------------------------------------------------------------------------------------------*/
+
+
+/*region Footer-------------------------------------------------------------------------------------------------------*/
+
+/* Footer bündig mit Logo links und Scrollcontainer rechts */
+.visitors-today-footer {
+    position: absolute;
+    left: 20px;
+    right: calc(20px + 0px);
+    bottom: 20px;
+    height: 60px;
+    background-color: #0a0f1e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border: #00b4d8 solid 1px;
+    border-radius: 5px;
+    padding: 1px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 10px rgba(1, 8, 51, 0.69);
+}
+
+/* Datum und Uhrzeit */
+.footer-date {
+    font-size: 2em;
+    font-weight: bold;
+    align-self: center;
+    padding-left: 255px;
+}
+
+/* Infotext */
+.footer-text {
+    font-size: 2em;
+    font-weight: bold;
+    align-self: center;
+    padding-right: 255px;
+}
+
+/*endregion Footer----------------------------------------------------------------------------------------------------*/
+
+
+/*region Alternative Größe--------------------------------------------------------------------------------------------*/
+
+@media (min-width: 2200px) {
+
+    /* Hauptcontainer */
+    .visitors-today-view {
+        background-size: 100% auto !important;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+
+    /* Logo oben links */
+    .visitors-today-view::before {
+        width: 320px;
+        height: 147px;
+    }
+
+    /* Überschrift-Header rechts neben Logo */
+    .visitors-today-header {
+        font-size: 2.8em;
+        height: 70px;
+        left: calc(20px + 310px + 60px);
+        max-width: calc(100% - 20px - 360px - 20px);
+        padding-top: 5px;
+    }
+
+    /* Container für Begrüßung + Scrollcontainer */
+    .visitors-today-header-container {
+        top: 90px;
+        left: calc(70px + 190px + 20px);
+        gap: 25px;
+    }
+
+    /* Begrüßungs-Header */
+    .visitors-today-list-header {
+        font-size: 2.3em;
+        max-width: 420px;
+        margin-top: 5px;
+    }
+
+    /* Scrollcontainer */
+    .visitors-today-list-container {
+        min-width: 750px;
+        max-width: 850px;
+        height: 73vh;
+    }
+
+    /* Footer */
+    .visitors-today-footer {
+        left: 20px;
+        right: 20px;
+    }
+
+    /* Datum und Uhrzeit / Infotext */
+    .footer-date, .footer-text {
+        font-size: 2.3em;
+        padding-left: 100px;
+        padding-right: 100px;
+        margin-right: 88px;
+        margin-left: 50px;
+    }
+}
+
+
+@media (max-width: 1400px) {
+
+    /* Hauptcontainer */
+    .visitors-today-view {
+        background-size: 100% auto !important;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+
+    /* Überschrift-Header */
+    .visitors-today-header {
+        font-size: 2em;
+        left: calc(40px + 320px + 10px);
+        right: 20px;
+        max-width: calc(100% - 40px - 320px - 30px);
+        padding-top: 4px;
+    }
+
+    /* Container für Begrüßung + Scrollcontainer */
+    .visitors-today-header-container {
+        top: 80px;
+        left: calc(40px + 85px + 20px);
+    }
+
+    /* Begrüßungs-Header */
+    .visitors-today-list-header {
+        font-size: 1.8em;
+        max-width: 300px;
+        margin-top: 1px;
+    }
+
+    /* Scrollcontainer */
+    .visitors-today-list-container {
+        min-width: 570px;
+        max-width: 980px;
+        min-height: 62vh;
+        max-height: 62vh;
+    }
+
+    /* Footer */
+    .visitors-today-footer {
+        left: 20px;
+        right: 20px;
+    }
+
+    /* Datum, Uhrzeit und Infotext */
+    .footer-date, .footer-text {
+        font-size: 1.5em;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+
+@media (max-width: 1000px) {
+
+    /* Logo oben links */
+    .visitors-today-view::before {
+        width: 217px;
+        height: 100px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    /* Überschrift-Header */
+    .visitors-today-header {
+        font-size: 1.5em;
+        left: calc(40px + 220px + 10px);
+        right: 20px;
+        max-width: calc(100% - 40px - 230px - 30px);
+        padding-top: 10px;
+    }
+
+    /* Container für Begrüßung + Scrollcontainer */
+    .visitors-today-header-container {
+        top: 80px;
+        left: calc(32px + 0px + 20px);
+        gap: 10px;
+    }
+
+    /* Begrüßungs-Header */
+    .visitors-today-list-header {
+        font-size: 1.5em;
+    }
+
+    /* Scrollcontainer */
+    .visitors-today-list-container {
+        min-width: 395px;
+        max-width: 500px;
+        min-height: 50vh;
+        max-height: 50vh;
+    }
+
+    /* Footer */
+    .visitors-today-footer {
+        left: 22px;
+        right: 30px;
+    }
+
+    /* Datum, Uhrzeit und Infotext */
+    .footer-date, .footer-text {
+        font-size: 1.5em;
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+}
+
+/*endregion Alternative Größe-----------------------------------------------------------------------------------------*/

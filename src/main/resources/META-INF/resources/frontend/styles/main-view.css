@@ -1,0 +1,1061 @@
+
+/*region Root---------------------------------------------------------------------------------------------------------*/
+
+:root {
+    --lumo-primary-color: #00b4d8;
+    --lumo-primary-text-color: #00b4d8;
+    --lumo-base-color: #141b2da1;
+    --lumo-primary-color-50pct: #00b4d8;
+    --lumo-primary-color-10pct: #00b4d866;
+    --lumo-shade-5pct: #0a0f1e;
+    --lumo-shade-40pct: #0a519b;
+    --lumo-contrast-5pct: rgba(10, 81, 155, 0.1);
+    --lumo-contrast-30pct: rgb(255, 255, 255);
+    --lumo-contrast-50pct: #00b4d884;
+    --lumo-contrast-70pct: #ffffff;
+    --lumo-border-radius: 5px;
+    --lumo-overlay-box-shadow: 0 0 0 2px #0a519b;
+
+    background: url("../images/background.jpg");
+}
+
+/*endregion Root------------------------------------------------------------------------------------------------------*/
+
+
+/* region Hauptcontainer----------------------------------------------------------------------------------------------*/
+
+/* Hauptcontainer */
+.main-view {
+    padding: 20px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: url("../images/background.jpg");
+    overflow: hidden;
+}
+
+/* Logo über der MainView */
+.main-view::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 18px;
+    width: 193px;
+    height: 90px;
+    background: url("../images/logo.png") no-repeat;
+    background-size: contain;
+    z-index: 10;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom: #00b4d8 solid 1px;
+    border-left: #00b4d8 solid 1px;
+    border-right: #00b4d8 solid 1px;
+    box-shadow: 0 2px 10px rgba(1, 8, 51, 0.69);
+}
+
+/*endregion Hauptcontainer--------------------------------------------------------------------------------------------*/
+
+
+/* region Header------------------------------------------------------------------------------------------------------*/
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: left;
+    gap: 12px;
+    padding: 10px 85px;
+    margin-left: 195px;
+    box-sizing: border-box;
+    width: 100%;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    background-color: transparent;
+    overflow: visible;
+}
+
+/* Navigations-Buttons */
+.nav-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #141b2da1;
+    border: #00b4d8 solid 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+    width: clamp(340px, 16vw, 313px);
+    flex: 0 0 auto;
+    transition: all 0.15s ease;
+    box-shadow: 0 2px 10px rgba(1, 8, 51, 0.69);
+}
+
+/* Navigations-Buttons Hover*/
+.nav-button:hover {
+    background-color: #141b2d;
+    color: #00b4d8;
+}
+
+/* Navigations-Button aktiv */
+.nav-button-active {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #0a0f1e;
+    border: #00b4d8 solid 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+    width: clamp(333px, 16vw, 313px);
+    flex: 0 0 auto;
+    transition: all 0.15s ease;
+    box-shadow: 0 2px 10px rgba(1, 8, 51, 0.69);
+}
+
+/* Logout-Button */
+.logout-button {
+    margin-left: 740px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #141b2da1;
+    border: #00b4d8 solid 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+    width: clamp(43px, 16vw, 161px);
+    flex: 0 0 auto;
+    transition: all 0.15s ease;
+    box-shadow: 0 2px 10px rgba(1, 8, 51, 0.69);
+}
+
+/* Logout-Button Hover */
+.logout-button:hover {
+    background-color: #141b2d;
+    color: #00b4d8;
+}
+
+/*endregion Header----------------------------------------------------------------------------------------------------*/
+
+
+/* region Toolbar-----------------------------------------------------------------------------------------------------*/
+
+/* Toolbar */
+.toolbar {
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 1px;
+    margin-top: 10px;
+}
+
+/* Filter-Anordnung */
+.filters-layout {
+    display: flex;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+
+/* Filterfeld (Besucher, Firma, Zweck...)--------------------------------------------------------*/
+
+/* Filterfeld */
+.filter-field {
+    width: 500px;
+}
+
+/* Das Äußere des Suche-Filterfelds stylen (Hintergrund, Rahmen, Rundung) */
+.filter-field::part(input-field) {
+    background-color: #141b2da1;
+    border: #00b4d8 solid 2px;
+    border-radius: 5px;
+    padding: 1px;
+    box-shadow: 0 2px 10px rgba(1, 8, 51, 0.69);
+}
+
+/* Filterfeld Hover-Animation */
+.filter-field::part(input-field):hover {
+    box-shadow: 1px 1px 2px #141b2d;
+}
+
+
+/* Datums-Filterfeld-----------------------------------------------------------------------------*/
+
+/* Das Äußere des Datums-Filterfelds stylen (Hintergrund, Rahmen, Rundung) */
+.date-filter::part(input-field) {
+    background-color: #141b2da1;
+    border: #00b4d8 solid 2px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    padding: 1px;
+    box-shadow: 0 2px 10px rgba(1, 8, 51, 0.69);
+}
+
+/* Datum-Filterfeld Toggle-Button (Kalender-Icon) */
+.date-filter::part(toggle-button) {
+    background: transparent;
+    border: none;
+    padding: 6px;
+    color: #FFFFFF;
+}
+
+/* Datum-Filterfeld Hover-Animation */
+.date-filter::part(input-field):hover {
+    box-shadow: 1px 1px 2px #2d1414;
+}
+
+/* Date-Picker */
+vaadin-date-picker-overlay::part(content) {
+    background-color: #141b2d;
+    color: #00b4d8;
+    font-weight: bold;
+    border-radius: 5px;
+    border: #00b4d8 solid 3px;
+}
+
+/* Date-Picker Styling für heutigen Tag */
+vaadin-date-picker-overlay vaadin-month-calendar::part(today) {
+    border-radius: 7px;
+    color: #00b4d8;
+    border: #00b4d8 solid 2px;
+    font-weight: 600;
+}
+
+/* Date-Picker Styling für heutigen Tag Hover */
+vaadin-date-picker-overlay vaadin-month-calendar::part(today):hover {
+    background-color: #0a0f1e;
+    color: #00b4d8;
+    border-radius: 7px;
+    border: #00b4d8 solid 2px;
+    font-weight: 600;
+}
+
+/* Date-Picker Styling für ausgewählten Tag */
+vaadin-date-picker-overlay vaadin-month-calendar::part(date selected) {
+    background-color: #0a0f1e;
+    color: #00b4d8;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+/* Date-Picker Styling für ausgewählten Tag Hover */
+vaadin-date-picker-overlay vaadin-month-calendar::part(date selected):hover {
+    background-color: #0a0f1e;
+    color: #00b4d8;
+    border: #00b4d8 solid 2px;
+}
+
+/* Date-Picker Styling für Monat */
+vaadin-date-picker-overlay vaadin-month-calendar::part(month-header) {
+    color: #00b4d8; 
+}
+
+/* Date-Picker Styling für Wochentag */
+vaadin-date-picker-overlay vaadin-month-calendar::part(weekday) {
+    color: #00b4d8; 
+}
+
+/* Date-Picker Styling für Datum */
+vaadin-date-picker-overlay vaadin-month-calendar::part(date) {
+    color: #ffffff; 
+}
+
+/* Buttons-Toolbar-------------------------------------------------------------------------------*/
+
+/* Wichtige Besuche Button */
+.important-button-toolbar {
+    height: 42px;
+    background-color: #141b2da1;
+    color: #FFFFFF;
+    font-weight: bold;
+    border: #00b4d8 solid 2px;
+    border-radius: 5px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    box-shadow: 0 2px 10px rgba(1, 8, 51, 0.69);
+}
+
+/* Wichtige Besuche Button Hover */
+.important-button-toolbar:hover {
+    background-color: #141b2d;
+    color: #00b4d8;
+}
+
+/* Wichtige Besuche Button aktiv */
+.important-button-toolbar-active {
+    background-color: #0a0f1e;
+    color: white;
+}
+
+/* Neuer Besuch Button */
+.add-button {
+    background-color: #141b2da1;
+    color: #FFFFFF;
+    border: #00b4d8 solid 2px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+    height: 42px;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(1, 8, 51, 0.69);
+}
+
+/* Neuer Besuch Button Hover */
+.add-button:hover {
+    background-color: #0a0f1e;
+    color: #00b4d8;
+}
+
+/*endregion Toolbar---------------------------------------------------------------------------------------------------*/
+
+
+/*region Grid Container-----------------------------------------------------------------------------------------------*/
+
+/* Grid-Container */
+.visit-grid {
+    color: #FFFFFF;
+    border: #00b4d8 solid 3px;
+    border-radius: 5px;
+    background-color: #141b2da1;
+    box-shadow: 0 2px 10px rgba(1, 8, 51, 0.69);
+}
+
+/* Grid-Header */
+.visit-grid::part(header-cell) {
+    background-color: #0a0f1e;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    padding: 10px;
+    padding-left: 50px;
+}
+
+/* Hover und aktiv */
+.visit-grid::part(header-cell):hover {
+    color: #ffffff;
+    background-color: #141b2d;
+}
+
+/* Zeilen/Spalten (Span-Klassen)-----------------------------------------------------------------*/
+
+/* Zeilenumbruch*/
+vaadin-grid::part(cell) {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    word-break: break-word;
+}
+
+/* Besucher-Spalte */
+.visit-grid span.visitor-col {
+    font-weight: 600;
+    display: inline-block;
+    max-width: 300px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 40px;
+}
+
+/* Firma-Spalte */
+.visit-grid span.company-col {
+    font-weight: 600;
+    display: inline-block;
+    max-width: 300px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 40px;
+}
+
+/* Zweck-Spalte */
+.visit-grid span.purpose-col {
+    display: inline-block;
+    max-width: 300px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 40px;
+}
+
+/* Datum-Spalte */
+.visit-grid span.date-col {
+    display: inline-block;
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 40px;
+}
+
+/* Uhrzeit-Spalte */
+.visit-grid span.time-col {
+    display: inline-block;
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 40px;
+}
+
+/* Zeilenmarkierung für wichtige Besuche */
+.visit-grid .important {
+    background-color: #141b2d;
+    color: #00b4d8;
+    font-weight: bold;
+    border: #00b4d8 solid 2px;
+    border-radius: 5px;
+    padding-right: 20px;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    box-shadow: 0 2px 5px rgba(1, 8, 51, 0.69);
+}
+
+/* Zeilenmarkierung für heutige Termine */
+.visit-grid .today {
+    background-color: #141b2d;
+    color: #FFFFFF;
+    font-weight: bold;
+    border-radius: 5px;
+    padding-right: 20px;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    border: #00b4d8 solid 2px;
+    box-shadow: 0 2px 5px rgba(1, 8, 51, 0.69);
+}
+
+/* Zeilen */
+.visit-grid::part(row) {
+    background-color: #141b2da1;
+    border-bottom: #0a0f1e solid 2px;
+    box-shadow: 0 2px 10px rgba(1, 8, 51, 0.69);
+}
+
+/* Hover für Zeilen */
+.visit-grid::part(row):hover {
+    background-color: #00b4d8;
+}
+
+/*endregion Grid Container--------------------------------------------------------------------------------------------*/
+
+
+/*region Action-Buttons-----------------------------------------------------------------------------------------------*/
+
+/* Action-Buttons */
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-left: 10px;
+    padding-left: 38px;
+}
+
+/* Bearbeitungs- und Lösch-Button */
+.edit-button, .delete-button {
+    background-color: #141b2d;
+    color: #FFFFFF;
+    border: #00b4d8 solid 2px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(1, 8, 51, 0.69);
+}
+
+/* Bearbeitungs- und Lösch Button Hover */
+.edit-button:hover, .delete-button:hover {
+    background-color: #0a0f1e;
+    color: #00b4d8;
+    border: #00b4d8 solid 2px;
+}
+
+/* Wichtige Besuche-Button */
+.important-button {
+    margin-left: 30px;
+    background-color: #141b2d;
+    color: #FFFFFF;
+    border: #00b4d8 solid 2px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(1, 8, 51, 0.69);
+}
+
+/* Wichtige Besuche-Button Hover */
+.important-button:hover {
+    background-color: #0a0f1e;
+    color: #00b4d8;
+    border: #00b4d8 solid 2px;
+}
+
+/* Wichtige Besuche-Button aktiv */
+.important-button.active {
+    color: #00b4d8;
+    background-color: #0a0f1e;
+}
+
+/* Benachrichtigungsbox oben rechts */
+vaadin-notification-card::part(content) {
+    background-color: #141b2d;
+    color: #FFFFFF;
+    border: #00b4d8 solid 2px;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: bold;
+    box-shadow: #0a519b 2px 2px 4px;
+}
+
+/*endregion Action-Buttons--------------------------------------------------------------------------------------------*/
+
+
+/*region neuer Besuch und Besuch bearbeiten---------------------------------------------------------------------------*/
+
+/* Neuer Besuch und Besuch bearbeiten äußerer Container */
+.create-dialog::part(overlay),
+.edit-dialog::part(overlay) {
+    width: 500px;
+    max-width: 90%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #00b4d8 solid 3px;
+    background-color: #141b2d;
+}
+
+/* Scrollbar innerhalb der Formulare-------------------------------------------------------------*/
+
+/* Scrollbar außen */
+::-webkit-scrollbar {
+    width: 7px;
+    border-radius: 5px;
+}
+
+/* Scrollbar Laufreiter */
+::-webkit-scrollbar-track {
+    background: #141b2d;
+    border-left: #00b4d8 solid 2px;
+}
+
+/* Scrollbar Läufer */
+::-webkit-scrollbar-thumb {
+    background: #141b2d;
+    border-bottom: #00b4d8 solid 2px;
+    border-top: #00b4d8 solid 2px;
+    border-left: #00b4d8 solid 2px;
+}
+
+/* Scrollbar Läufer Hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #00b4d8;
+}
+
+/* Neuer Besuch----------------------------------------------------------------------------------*/
+
+/* Header-Container für Neuer Besuch Formular */
+.header-container {
+    background-color: #141b2d;
+    width: 92.5%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: #00b4d8 solid 3px;
+    margin-bottom: 7px;
+    box-shadow: 0 2px 10px rgba(1, 8, 51, 0.69);
+}
+
+/* Überschrift im Header für  Neuer Besuch Formular */
+.header-title {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Dialog Neuer Besuch innerer Container */
+.dialog-form {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    border: #00b4d8 solid 3px;
+    border-radius: 5px;
+    background-color: #0a0f1e;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: #0a519b 1px 3px 20px;
+}
+
+/* Dialog Neuer Besuch Input-Felder Breite */
+.dialog-form vaadin-text-field,
+.dialog-form vaadin-combo-box,
+.dialog-form vaadin-date-picker,
+.dialog-form vaadin-time-picker {
+    width: 100%;
+}
+
+/* Dialog Neuer Besuch Input-Felder Styling */
+.dialog-form vaadin-text-field::part(input-field),
+.dialog-form vaadin-combo-box::part(input-field),
+.dialog-form vaadin-date-picker::part(input-field),
+.dialog-form vaadin-time-picker::part(input-field) {
+    background-color: #141b2da1;
+    border: #00b4d8 solid 2px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    padding: 1px 6px;
+    box-shadow: 0 2px 10px rgba(1, 8, 51, 0.69);;
+}
+
+/* Dialog Neuer Besuch Styling der Buttons in den Inputfeldern */
+.dialog-form vaadin-combo-box::part(toggle-button),
+.dialog-form vaadin-date-picker::part(toggle-button),
+.dialog-form vaadin-time-picker::part(toggle-button) {
+    background: transparent;
+    border: none;
+    padding: 6px;
+    color: #FFFFFF;
+}
+
+/* Dialog Neuer Besuch Input-Felder Hover */
+.dialog-form vaadin-text-field::part(input-field):hover,
+.dialog-form vaadin-combo-box::part(input-field):hover,
+.dialog-form vaadin-date-picker::part(input-field):hover,
+.dialog-form vaadin-time-picker::part(input-field):hover {
+    box-shadow: 1px 1px 2px #0a519b;
+    color: #00b4d8;
+}
+
+/* Styling für Ausklapp-Menüs*/
+
+/* Uhrzeit */
+vaadin-time-picker-overlay::part(overlay) {
+    border: 2px solid #00b4d8;
+    border-radius: 5px;
+    background-color: #141b2d;
+    color: #FFFFFF;
+}
+
+/* ComboBox */
+vaadin-combo-box-overlay::part(overlay) {
+    border: #00b4d8 solid 2px;
+    border-radius: 5px;
+    background-color: #141b2d;
+    color: #FFFFFF;
+}
+
+/* Besuch bearbeiten-----------------------------------------------------------------------------*/
+
+/* Header-Container für Besuch bearbeiten Formular */
+.header-container-edit {
+    background-color: #141b2d;
+    width: 92.5%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: #00b4d8 solid 3px;
+    box-shadow: 0 2px 10px rgba(1, 8, 51, 0.69);
+}
+
+/* Überschrift im Header des Besuch bearbeiten Formular */
+.header-title-edit {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Dialog Besuch bearbeiten innerer Container */
+.dialog-form-edit {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    border: #00b4d8 solid 3px;
+    border-radius: 5px;
+    background-color: #0a0f1e;
+    display: flex;
+    flex-direction: column;
+    box-shadow: #0a519b 1px 3px 20px;
+}
+
+/* Dialog Besuch bearbeiten Input-Felder Breite */
+.dialog-form-edit vaadin-text-field,
+.dialog-form-edit vaadin-combo-box,
+.dialog-form-edit vaadin-date-picker,
+.dialog-form-edit vaadin-time-picker {
+    width: 100%;
+}
+
+/* Dialog Besuch bearbeiten Input-Felder Styling */
+.dialog-form-edit vaadin-text-field::part(input-field),
+.dialog-form-edit vaadin-combo-box::part(input-field),
+.dialog-form-edit vaadin-date-picker::part(input-field),
+.dialog-form-edit vaadin-time-picker::part(input-field) {
+    background-color: #141b2da1;
+    color: #FFFFFF;
+    border: #00b4d8 solid 2px;
+    border-radius: 5px;
+    padding: 1px 6px;
+    box-shadow: 0 2px 10px rgba(1, 8, 51, 0.69);
+}
+
+/* Dialog Besuch bearbeiten Styling der Buttons in den Inputfeldern */
+.dialog-form-edit vaadin-combo-box::part(toggle-button),
+.dialog-form-edit vaadin-date-picker::part(toggle-button),
+.dialog-form-edit vaadin-time-picker::part(toggle-button) {
+    background: transparent;
+    border: none;
+    padding: 6px;
+    color: #FFFFFF;
+}
+
+/* Dialog Besuch bearbeiten Input-Felder Hover */
+.dialog-form-edit vaadin-text-field::part(input-field):hover,
+.dialog-form-edit vaadin-combo-box::part(input-field):hover,
+.dialog-form-edit vaadin-date-picker::part(input-field):hover,
+.dialog-form-edit vaadin-time-picker::part(input-field):hover {
+    box-shadow: 1px 1px 2px #0a519b;
+    color: #00b4d8;
+}
+
+
+/* Dialog Buttons--------------------------------------------------------------------------------*/
+
+/* Dialog Neuer Besuch Buttons Anordnung */
+.dialog-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+/* Dialog Besuch bearbeiten Buttons Anordnung */
+.dialog-buttons-edit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+/* Abbruch Button */
+.cancel-button {
+    width: 195px;
+    background-color: #141b2d;
+    color: #FFFFFF;
+    border: #00b4d8 solid 2px;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(1, 8, 51, 0.69);
+}
+
+/* Abbruch Button Hover */
+.cancel-button:hover {
+    background-color: #0a0f1e;
+    color: #00b4d8;
+}
+
+/* Speicher Button */
+.save-button {
+    width: 195px;
+    background-color: #141b2d;
+    color: #FFFFFF;
+    border: #00b4d8 solid 2px;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(1, 8, 51, 0.69);
+}
+
+/* Abbruch Button Hover*/
+.save-button:hover {
+    background-color: #0a0f1e;
+    color: #00b4d8;
+}
+
+/* Speichern & weiteren Besuch anlegen Button */
+.save-button-secondary {
+    flex-basis: 100%;
+    align-self: flex-end;
+    width:280px;
+    background-color: #141b2d;
+    color: #FFFFFF;
+    border: #00b4d8 solid 2px;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(1, 8, 51, 0.69);
+}
+
+/* Speichern & weiteren Besuch anlegen Button Hover */
+.save-button-secondary:hover {
+    background-color: #0a0f1e;
+    color: #00b4d8;
+}
+
+/*endregion neuer Besuch und Besuch bearbeiten------------------------------------------------------------------------*/
+
+
+/*region Alternative Größe--------------------------------------------------------------------------------------------*/
+
+
+@media (max-width: 1400px) {
+
+    /* Hauptcontainer */
+    .main-view {
+        background-size: 100% auto !important;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+
+    /* Navigations-Buttons */
+    .nav-button {
+        width: clamp(322px, 16vw, 313px);
+    }
+
+    /* Navigations-Button aktiv */
+    .nav-button-active {
+        width: clamp(322px, 16vw, 313px);
+    }
+
+    /* Filterfeld */
+    .filter-field {
+        width: 480px;
+    }
+
+    /* Logout-Button */
+    .logout-button {
+        margin-left: 160px;
+    }
+
+    /* Neuer Besuch Alternativ-----------------------------------------------------------------------*/
+
+    /* Header-Container für Neuer Besuch Formular */
+    .header-container {
+        width: 92.8%;
+        height: 10px;
+    }
+
+    /* Dialog Neuer Besuch innerer Container */
+    .dialog-form {
+        padding: 15px;
+        gap: 1px;
+    }
+
+    /* Dialog Neuer Besuch Input-Felder Breite */
+    .dialog-form vaadin-text-field,
+    .dialog-form vaadin-combo-box,
+    .dialog-form vaadin-date-picker,
+    .dialog-form vaadin-time-picker {
+        width: 100%;
+    }
+
+    /* Dialog Neuer Besuch Input-Felder Styling */
+    .dialog-form vaadin-text-field::part(input-field),
+    .dialog-form vaadin-combo-box::part(input-field),
+    .dialog-form vaadin-date-picker::part(input-field),
+    .dialog-form vaadin-time-picker::part(input-field) {
+        height: 35px;
+    }
+
+    /* Besuch bearbeiten Alternativ------------------------------------------------------------------*/
+
+    /* Header-Container für Besuch bearbeiten Formular */
+    .header-container-edit {
+        background-color: #141b2d;
+        width: 92.5%;
+        padding: 15px;
+        height: 10px;
+    }
+
+    /* Dialog Besuch bearbeiten innerer Container */
+    .dialog-form-edit {
+        height: 470px;
+        max-width: 500px;
+        padding: 15px;
+    }
+
+    /* Dialog Besuch bearbeiten Input-Felder */
+    .dialog-form-edit vaadin-text-field,
+    .dialog-form-edit vaadin-combo-box,
+    .dialog-form-edit vaadin-date-picker,
+    .dialog-form-edit vaadin-time-picker {
+        margin-top: -1px;
+        margin-bottom: -10px;
+    }
+
+    /* Dialog Besuch bearbeiten Input-Felder */
+    .dialog-form-edit vaadin-text-field::part(input-field),
+    .dialog-form-edit vaadin-combo-box::part(input-field),
+    .dialog-form-edit vaadin-date-picker::part(input-field),
+    .dialog-form-edit vaadin-time-picker::part(input-field) {
+        height: 35px;
+        width: 99.5%;
+    }
+
+    /* Dialog Buttons Alternativ---------------------------------------------------------------------*/
+
+    /* Dialog Neuer Besuch Buttons Anordnung */
+    .dialog-buttons {
+        gap: 10px;
+    }
+
+    /* Abbruch Button */
+    .cancel-button {
+        width: 200.5px;
+        height: 30px;
+    }
+
+    /* Speicher Button */
+    .save-button {
+        width: 200.5px;
+        height: 30px;
+    }
+
+    /* Speichern & weiteren Besuch anlegen Button */
+    .save-button-secondary {
+        width:280px;
+        height: 30px;
+    }
+
+    /* Wichtige Besuche-Button */
+    .important-button {
+        margin-left: 10px;
+    }
+
+}
+
+@media (max-width: 1000px) {
+
+    /* Header */
+    .header {
+        margin-left: 158px;
+    }
+
+    /* Navigations-Buttons */
+    .nav-button {
+        width: clamp(325px, 16vw, 313px);
+    }
+
+    /* Navigations-Button aktiv */
+    .nav-button-active {
+        width: clamp(325px, 16vw, 313px);
+    }
+
+
+    /* Filterfeld */
+    .filter-field {
+        width: 280px;
+    }
+
+    /* Logout-Button */
+    .logout-button {
+        margin-left: 545px;
+    }
+
+    /*Grid Container alternativ----------------------------------------------------------------------*/
+
+    /* Grid-Header */
+    .visit-grid::part(header-cell) {
+        padding-left: 5px;
+    }
+
+    /* Zeilen/Spalten (Span-Klassen)------------------------------------------*/
+
+    /* Besucher-Spalte */
+    .visit-grid span.visitor-col {
+        max-width: 110px;
+        padding-left: 2px;
+        padding-right: 2px;
+        margin-left: 5px;
+    }
+
+    /* Firma-Spalte */
+    .visit-grid span.company-col {
+        max-width: 110px;
+        padding-left: 2px;
+        padding-right: 2px;
+        margin-left: 5px;
+    }
+
+    /* Zweck-Spalte */
+    .visit-grid span.purpose-col {
+        max-width: 100px;
+        padding-left: 2px;
+        padding-right: 2px;
+        margin-left: 5px;
+    }
+
+    /* Datum-Spalte */
+    .visit-grid span.date-col {
+        max-width: 100px;
+        padding-left: 2px;
+        padding-right: 2px;
+        margin-left: 5px;
+    }
+
+    /* Uhrzeit-Spalte */
+    .visit-grid span.time-col {
+        max-width: 80px;
+        padding-left: 2px;
+        padding-right: 2px;
+        margin-left: 5px;
+    }
+
+    /* Zeilenmarkierung für wichtige Besuche */
+    .visit-grid .important {
+        padding-right: 2px;
+    }
+
+    /* Zeilenmarkierung für heutige Termine */
+    .visit-grid .today {
+        padding-right: 2px;
+    }
+
+    /*Action-Buttons alternativ----------------------------------------------------------------------*/
+
+    /* Action-Buttons */
+    .action-buttons {
+        display: flex;
+        gap: 10px;
+        margin-left: 2px;
+        padding-left: 3px;
+    }
+
+    /* Wichtige Besuche-Button */
+    .important-button {
+        margin-left: 5px;
+    }
+
+    /* Wichtige Besuche-Button Hover */
+    .important-button:hover {
+        background-color: #0a519b;
+        color: #ffffff;
+        border: #0a519b solid 2px;
+    }
+
+    /* Wichtige Besuche-Button aktiv */
+    .important-button.active {
+        color: #ffffff;
+        background-color: #0a519b;
+    }
+
+    /* Benachrichtigungsbox oben rechts */
+    vaadin-notification-card::part(content) {
+        background-color: rgba(255, 255, 255, 0.48);
+        color: #0a519b;
+        border: #0a519b solid 2px;
+        border-radius: 5px;
+        font-size: large;
+        font-weight: bold;
+        box-shadow: #0a519b 2px 2px 4px;
+    }
+
+
+
+    /* Dialog Neuer Besuch innerer Container */
+    .dialog-form {
+        padding: 15px;
+        gap: 1px;
+        height: 485px;
+    }
+
+}
+
+/*endregion Alternative Größe-----------------------------------------------------------------------------------------*/

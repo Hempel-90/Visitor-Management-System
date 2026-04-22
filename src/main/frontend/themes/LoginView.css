@@ -1,0 +1,213 @@
+/*region Keyframes----------------------------------------------------------------------------------------------------*/
+
+@keyframes plop {
+    0% { scale: 0 }
+}
+
+/*endregion Keyframes-------------------------------------------------------------------------------------------------*/
+
+
+/*region Login Main Container-----------------------------------------------------------------------------------------*/
+
+/* Login Hauptcontainer */
+.login-main {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    inset: 0;
+}
+
+/* Login Body */
+.login-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    margin: auto;
+    padding: 1.25vw;
+    width: 20vw;
+    border-radius: 0.7vw;
+    box-shadow: 0 0.2vw 0.4vw -0.05vw rgb(0 0 0 / 0.1), 0 0.1vw 0.2vw -0.1vw rgb(0 0 0 / 0.1);
+    animation: plop 0.5s;
+}
+
+/*endregion Login Main Container--------------------------------------------------------------------------------------*/
+
+
+/*region Login Header-------------------------------------------------------------------------------------------------*/
+
+/* Header Container */
+.login-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1vw;
+    font-weight: 550;
+}
+
+/* Icon / Kreis im Header */
+.login-header > div {
+    display: grid;
+    place-items: center;
+    height: 2.5vw;
+    margin-bottom: 1vw;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    font-size: 1vw;
+}
+
+/* Untertitel / Beschreibung */
+.login-header > span {
+    font-weight: normal;
+    font-size: 0.7vw;
+    color: #a0aec0;
+}
+
+/*endregion Login Header----------------------------------------------------------------------------------------------*/
+
+
+/*region Error Message------------------------------------------------------------------------------------------------*/
+
+.error-message {
+    padding: 0.5vw;
+    border: solid 0.05vw #fc8181;
+    border-radius: 0.3vw;
+    color: #c53030;
+    font-size: 0.7vw;
+    font-weight: bold;
+    background: #fff5f5;
+}
+
+.error-message > span {
+    font-weight: 500;
+}
+
+/*endregion Error Message---------------------------------------------------------------------------------------------*/
+
+
+/*region Login Form---------------------------------------------------------------------------------------------------*/
+
+/* Formular Container */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+/* Buttons im Formular */
+.login-form > button {
+    padding: 0 1.25vw;
+    height: 2.15vw;
+    border: none;
+    border-radius: 0.3vw;
+    font-weight: 550;
+    font-size: 0.7vw;
+    transition: filter 0.3s, scale 0.3s;
+}
+
+/* Button Hover */
+.login-form > button:hover {
+    filter: brightness(0.9);
+}
+
+/* Button Aktiv */
+.login-form > button:active {
+    scale: 0.95;
+}
+
+/* Button Disabled */
+.login-form > button:disabled {
+    filter: grayscale(1);
+}
+
+/*endregion Login Form------------------------------------------------------------------------------------------------*/
+
+
+/*region Login Link---------------------------------------------------------------------------------------------------*/
+
+.loginLink {
+    appearance: none;
+    align-self: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 1.5rem;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px, rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #3c4043;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-size: clamp(0.75rem, 2vw, 1rem);
+    font-weight: 500;
+    height: 3rem;
+    justify-content: center;
+    letter-spacing: 0.016rem;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 0.125em 1.5em;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform, opacity;
+    z-index: 0;
+}
+
+/* Link Hover */
+.loginLink:hover {
+    background: #F6F9FE;
+    text-decoration: none;
+}
+
+/*endregion Login Link------------------------------------------------------------------------------------------------*/
+
+
+/*region Responsive Anpassungen---------------------------------------------------------------------------------------*/
+
+@media (max-width: 1400px) {
+
+    .login-body {
+        width: 25vw;
+        padding: 1vw;
+    }
+
+    .login-header {
+        font-size: 1.2vw;
+    }
+
+    .login-header > span {
+        font-size: 0.8vw;
+    }
+
+    .login-form > button {
+        height: 2.5vw;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .login-body {
+        width: 35vw;
+        padding: 1vw;
+    }
+
+    .login-header {
+        font-size: 1.5vw;
+    }
+
+    .login-header > span {
+        font-size: 0.9vw;
+    }
+
+    .login-form > button {
+        height: 2.8vw;
+    }
+}
+
+/*endregion Responsive Anpassungen------------------------------------------------------------------------------------*/
