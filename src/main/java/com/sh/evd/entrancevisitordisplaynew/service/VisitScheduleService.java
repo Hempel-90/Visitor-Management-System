@@ -14,7 +14,6 @@ package com.sh.evd.entrancevisitordisplaynew.service;
 
 import com.sh.evd.entrancevisitordisplaynew.entity.VisitSchedule;
 import com.sh.evd.entrancevisitordisplaynew.entity.Visitor;
-import com.sh.evd.entrancevisitordisplaynew.entity.Company;
 import com.sh.evd.entrancevisitordisplaynew.repository.VisitScheduleRepository;
 import org.springframework.stereotype.Service;
 import java.time.LocalDate;

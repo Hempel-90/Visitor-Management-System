@@ -11,9 +11,9 @@
     content: "";
     position: absolute;
     top: 0;
-    left: 40px;
-    width: 300px;
-    height: 140px;
+    left: 755px;
+    width: 400px;
+    height: 190px;
     background: url("../images/logo.png") no-repeat;
     background-size: contain;
     z-index: 10;

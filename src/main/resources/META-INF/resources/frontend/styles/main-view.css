@@ -37,7 +37,7 @@
     content: "";
     position: absolute;
     top: 0;
-    left: 18px;
+    left: 880px;
     width: 193px;
     height: 90px;
     background: url("../images/logo.png") no-repeat;
@@ -61,8 +61,7 @@
     display: flex;
     justify-content: left;
     gap: 12px;
-    padding: 10px 85px;
-    margin-left: 195px;
+    padding: 10px 2px;
     box-sizing: border-box;
     width: 100%;
     flex-wrap: wrap;
@@ -111,7 +110,7 @@
     border-radius: 5px;
     cursor: pointer;
     white-space: nowrap;
-    width: clamp(333px, 16vw, 313px);
+    width: clamp(340px, 16vw, 313px);
     flex: 0 0 auto;
     transition: all 0.15s ease;
     box-shadow: 0 2px 10px rgba(1, 8, 51, 0.69);
@@ -119,7 +118,7 @@
 
 /* Logout-Button */
 .logout-button {
-    margin-left: 740px;
+    margin-left: 1007px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -273,6 +272,7 @@ vaadin-date-picker-overlay vaadin-month-calendar::part(date) {
 
 /* Wichtige Besuche Button */
 .important-button-toolbar {
+    margin-right: 350px;
     height: 42px;
     background-color: #141b2da1;
     color: #FFFFFF;
@@ -299,6 +299,7 @@ vaadin-date-picker-overlay vaadin-month-calendar::part(date) {
 
 /* Neuer Besuch Button */
 .add-button {
+    
     background-color: #141b2da1;
     color: #FFFFFF;
     border: #00b4d8 solid 2px;
@@ -804,6 +805,10 @@ vaadin-combo-box-overlay::part(overlay) {
         background-position: top;
     }
 
+    .main-view::before {
+        left: 720px;
+    }
+
     /* Navigations-Buttons */
     .nav-button {
         width: clamp(322px, 16vw, 313px);
@@ -816,12 +821,49 @@ vaadin-combo-box-overlay::part(overlay) {
 
     /* Filterfeld */
     .filter-field {
-        width: 480px;
+        width: 450px;
+    }
+
+    /* Wichtige Besuche Button */
+    .important-button-toolbar {
+        margin-right: 50px;
+    
     }
 
     /* Logout-Button */
     .logout-button {
-        margin-left: 160px;
+        margin-left: 403px;
+    }
+
+    /* Besucher-Spalte */
+    .visit-grid span.visitor-col {
+        margin-left: 10px;
+    }
+
+    /* Firma-Spalte */
+    .visit-grid span.company-col {
+        margin-left: 10px;
+    }
+
+    /* Zweck-Spalte */
+    .visit-grid span.purpose-col {
+        margin-left: 10px;
+    }
+
+    .visit-grid span.date-col {
+        margin-left: 10px;
+    }
+
+    .visit-grid span.time-col {
+        margin-left: 10px;
+    }
+
+    .visit-grid::part(header-cell) {
+        padding-left: 20px;
+    }
+
+    .action-buttons {
+        padding-left: 8px;
     }
 
     /* Neuer Besuch Alternativ-----------------------------------------------------------------------*/
@@ -877,7 +919,7 @@ vaadin-combo-box-overlay::part(overlay) {
     .dialog-form-edit vaadin-date-picker,
     .dialog-form-edit vaadin-time-picker {
         margin-top: -1px;
-        margin-bottom: -10px;
+        margin-bottom: -20px;
     }
 
     /* Dialog Besuch bearbeiten Input-Felder */
@@ -885,7 +927,7 @@ vaadin-combo-box-overlay::part(overlay) {
     .dialog-form-edit vaadin-combo-box::part(input-field),
     .dialog-form-edit vaadin-date-picker::part(input-field),
     .dialog-form-edit vaadin-time-picker::part(input-field) {
-        height: 35px;
+        height: 30px;
         width: 99.5%;
     }
 
@@ -1046,8 +1088,6 @@ vaadin-combo-box-overlay::part(overlay) {
         font-weight: bold;
         box-shadow: #0a519b 2px 2px 4px;
     }
-
-
 
     /* Dialog Neuer Besuch innerer Container */
     .dialog-form {

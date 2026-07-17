@@ -133,7 +133,7 @@ public class BlackboardView extends VerticalLayout {
 
         add(header1, headerContainer);
 
-        // Polling alle 5 Sekunden zum Live-Update
+        // Polling jede Sekunde zum Live-Update
         UI.getCurrent().setPollInterval(1000);
         UI.getCurrent().addPollListener(e -> {
             updateVisitors(visitorListInner);

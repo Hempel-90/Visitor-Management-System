@@ -245,7 +245,7 @@ public class MainView extends VerticalLayout {
         //region Anordnung----------------------------------------------------------------------------------------------
 
         // Filter-Anordnung
-        HorizontalLayout filtersLayout = new HorizontalLayout(filterField, dateFilter, importantSortButton);
+        HorizontalLayout filtersLayout = new HorizontalLayout(importantSortButton, filterField, dateFilter);
         filtersLayout.addClassName("filters-layout");
         filtersLayout.setWidthFull();
 
@@ -425,8 +425,8 @@ public class MainView extends VerticalLayout {
         // Aktionen-Spalte
         scheduleGrid.addColumn(new ComponentRenderer<>(this::createActionButtons))
                 .setHeader("Aktionen").setAutoWidth(true);
-
-        //endregion Zeilen/Spalten (Span-Klassen)-----------------------------------------------------------------------
+                
+    //endregion Zeilen/Spalten (Span-Klassen)-----------------------------------------------------------------------
     }
 
     //endregion Grid-Container------------------------------------------------------------------------------------------

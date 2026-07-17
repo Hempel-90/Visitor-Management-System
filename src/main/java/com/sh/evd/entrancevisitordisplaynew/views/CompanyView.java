@@ -198,10 +198,10 @@ public class CompanyView extends VerticalLayout {
 
         //region Filterfeld---------------------------------------------------------------------------------------------
 
-        filterField.setPlaceholder("Suche Firma");
+        filterField.setPlaceholder("Suche nach Firma...");
         filterField.setClearButtonVisible(true);
         filterField.addValueChangeListener(e -> applyFilter(e.getValue()));
-        filterField.addClassName("filter-field");
+        filterField.addClassName("filter-field-company");
 
         //endregion Filterfeld------------------------------------------------------------------------------------------
 
