@@ -106,6 +106,19 @@
         background-repeat: no-repeat;
         background-position: top;
     }
+
+    /* Logo */
+    .login-view::before {
+        left: 440px;
+    }
+
+    .login-over-view-container {
+        top: 250px;
+    }
+
+    .login-view-container {
+        margin-top: 265px;
+    }
 }
 
 @media (max-width: 1000px) {
