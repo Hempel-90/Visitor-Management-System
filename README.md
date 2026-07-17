@@ -1,7 +1,7 @@
-# Entrance Visitor Display
+# Visitor Management System
 
 ## About
-Entrance Visitor Display is a web application that allows receptionists and administrators to manage visitors, companies, and appointments through a web-based administration interface. The front page displays today's appointments and welcomes the visitors.
+Visitor Management System is a web application that allows receptionists and administrators to manage visitors, companies, and appointments through a web-based administration interface. The front page displays today's appointments and welcomes the visitors.
 
 The application features a modern, responsive interface with clear visual hierarchy, real-time updates, and easy navigation. Important appointments can be highlighted, and all data management tasks can be performed via CRUD operations.
 
@@ -44,7 +44,7 @@ The application features a modern, responsive interface with clear visual hierar
   - **controller/**:
   Classes that handle application logic. Accept requests from the frontend, retrieve data via services, and return views.
 
-	  - VisitorController 
+	- VisitorController 
     - CompanyController 
     - VisitScheduleController
 
@@ -99,8 +99,3 @@ The application features a modern, responsive interface with clear visual hierar
 	jdbc:h2:file:./data/evd-db
 - **Set database user password:**
 	ALTER USER sa PASSWORD '  ';
-
-
-
-© ZGS Bildungs-GmbH - All rights reserved.
-You may not use, distribute or modify this code without explicit permission by ZGS Bildungs-GmbH.
