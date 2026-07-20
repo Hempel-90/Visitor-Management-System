@@ -98,8 +98,5 @@ The application features a modern, responsive interface with clear visual hierar
 - **Database connection string:**
 	jdbc:h2:file:./data/evd-db
 - **Set database user password:**
-<<<<<<< HEAD
 	ALTER USER sa PASSWORD '  ';
-=======
 	ALTER USER sa PASSWORD '  ';
->>>>>>> 37a4313 (Update README and improve login and blackboard styles)
