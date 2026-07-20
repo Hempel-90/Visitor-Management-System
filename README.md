@@ -100,3 +100,17 @@ The application features a modern, responsive interface with clear visual hierar
 - **Set database user password:**
 	ALTER USER sa PASSWORD '  ';
 	ALTER USER sa PASSWORD '  ';
+
+## Images of the Application
+<img width="1920" height="886" alt="Login" src="https://github.com/user-attachments/assets/0222f700-8e85-4a72-aae7-e846c65e7cee" />
+<img width="1920" height="889" alt="Besuchsverwaltung" src="https://github.com/user-attachments/assets/72f67c1c-42b9-4f36-9a39-9f827fe53d19" />
+<img width="1920" height="895" alt="Firmenverwaltung" src="https://github.com/user-attachments/assets/5dc8e9bd-7ed4-4c91-865a-53eaca71feda" />
+<img width="1920" height="894" alt="Besuch_anlegen" src="https://github.com/user-attachments/assets/d4a332b0-98bf-4b02-9206-53f69088b623" />
+<img width="1917" height="895" alt="Besuchsanzeige_ohne" src="https://github.com/user-attachments/assets/d90ebaa2-772d-467a-9a8c-14f3fd04e048" />
+<img width="1920" height="895" alt="Besuchsanzeige_mit" src="https://github.com/user-attachments/assets/58e7f0a1-c7e8-454a-bb47-4d00428a76a4" />
+
+
+
+
+
+
